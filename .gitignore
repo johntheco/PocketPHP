@@ -1,0 +1,7 @@
+# Projects dependencies
+/node_modules
+/vendor
+
+# Debug logs
+npm-debug.log
+yarn-error.log

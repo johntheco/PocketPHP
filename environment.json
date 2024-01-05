@@ -1,0 +1,92 @@
+{
+    "development": {
+        "conditions": [
+            {
+                "field": "$_SERVER['SERVER_NAME']",
+                "is": "===",
+                "value": "localhost"
+            }
+        ],
+        "configuration": {
+            "runtimeSettings": {
+                "session.name": "rpsession",
+                "display_errors": "1",
+                "error_reporting": "E_ALL ^ E_STRICT ^ E_WARNING ^ E_NOTICE"
+            },
+            "runtimeDefines": {
+                "siteurl": "",
+                "dbserver": "",
+                "dbtype": "",
+                "dbhost": "",
+                "dbname": "",
+                "dbuser": "",
+                "dbpass": "",
+                "root": "",
+                "debug": true
+            },
+            "templateDefines": {
+                "layout": "main",
+                "assets": "public",
+                "title": "PocketPHP",
+                "description": "PocketPHP - minimal php-server boilerplate for enthusiasts"
+            },
+            "sqlDatabase": {
+                "type": "",
+                "host": "",
+                "port": "",
+                "name": "",
+                "user": "",
+                "pass": ""
+            },
+            "http": {
+                "default": "404",
+                "error": "false"
+            }
+        }
+    },
+    "production": {
+        "conditions": [
+            {
+                "field": "$_SERVER['SERVER_NAME']",
+                "is": "!==",
+                "value": "localhost"
+            }
+        ],
+        "configuration": {
+            "runtimeSettings": {
+                "session.name": "rpsession",
+                "display_errors": "0",
+                "error_reporting": "0"
+            },
+            "runtimeDefines": {
+                "siteurl": "",
+                "dbserver": "",
+                "dbtype": "",
+                "dbhost": "",
+                "dbname": "",
+                "dbuser": "",
+                "dbpass": "",
+                "root": "",
+                "debug": false
+            },
+            "templateDefines": {
+                "layout": "main",
+                "assets": "public",
+                "title": "PocketPHP",
+                "description": "PocketPHP - minimal php-server boilerplate for enthusiasts"
+            },
+            "sqlDatabase": {
+                "type": "",
+                "host": "",
+                "port": "",
+                "name": "",
+                "user": "",
+                "pass": ""
+            },
+            "http": {
+                "default": "404",
+                "error": "false"
+            }
+        }
+    }
+}
